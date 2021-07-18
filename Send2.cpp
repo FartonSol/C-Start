@@ -27,5 +27,4 @@ void loop(){
     uint32_t sec=millis();
     Out(sec, Number);
     Serial.println(Number);
-    Serial.println(sec);
 }
