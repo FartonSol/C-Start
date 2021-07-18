@@ -20,11 +20,12 @@ void Out(uint32_t sec, char Number[]) {
         Number[j+3]=sec%10+'0';
         sec=sec/10;
         Number[j+4]='E';
+        Number[j+5]='\n';
     } 
 }
 char Number[255]={0};
 void loop(){
     uint32_t sec=millis();
     Out(sec, Number);
-    Serial.println(Number);
+    Serial.write(Number, Sum(sec)+5);
 }
